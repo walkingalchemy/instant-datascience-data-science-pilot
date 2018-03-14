@@ -154,7 +154,7 @@ Not bad at all.  Strings are great at manipulating all of our text at once.  How
 
 ### Lists
 
-To separate our string into a individual words, we need to change this continuous string into a list.  Here is how we tell the computer to do this: split the string into a different entity every time you see a space.  Here are those directions in code.
+To separate our string into individual words, we need to change this continuous string into a list.  Here is how we tell the computer to do this: split the string into a different entity every time you see a space.  Here are those directions in code.
 
 
 ```python
@@ -645,16 +645,18 @@ trace = {'type': 'bar', 'x': unique_words, 'y': list(word_histogram.values())}
 
 And now we have plotted our words. The beach saying "Ba" 25 times, and remember we only copied over some of the lyrics.  Repetitive indeed.
 
+****** What is this doing?  Looks like it is trying to play, but not displaying as such.
 import plotly
-from plotly.offline import iplot, init_notebook_mode
-from plotly import tools
-import plotly.graph_objs as go
-init_notebook_mode(connected=True)
+                    from plotly.offline import iplot, init_notebook_mode
+                    from plotly import tools
+                    import plotly.graph_objs as go
+                    init_notebook_mode(connected=True)
 
-trace = {'type': 'bar', 'x': list(unique_words), 'y': list(word_histogram.values())}
-plotly.offline.iplot({'data': [trace]})
+                    trace = {'type': 'bar', 'x': list(unique_words), 'y': list(word_histogram.values())}
+                    plotly.offline.iplot({'data': [trace]})
 
-![](./histogram.png)
+                    ![](./histogram.png)
+******                    
 
 ### Summary
 
